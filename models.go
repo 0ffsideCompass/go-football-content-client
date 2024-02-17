@@ -13,6 +13,7 @@ type FixtureByDateRequest struct {
 type ArticleResponse struct {
 	Title    string               `json:"title"`
 	Body     string               `json:"body"`
+	Summary  string		      `json:"summary"`
 	HashTags []string             `json:"hash_tags"`
 	Type     string               `json:"type"`
 	Data     FixtureDataStructure `json:"data"`
