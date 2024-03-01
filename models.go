@@ -16,6 +16,7 @@ type ArticleResponse struct {
 	HashTags []string             `json:"hash_tags"`
 	Type     string               `json:"type"`
 	Data     FixtureDataStructure `json:"data"`
+	Summary  string               `json:"summary"`
 }
 
 type FixtureByDateResponse struct {
