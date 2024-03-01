@@ -9,9 +9,9 @@ const (
 	feedEndpoint = "/feed"
 )
 
-func (c *Client) Feed(leagues []int) (*FeedResponse, error) {
+func (c *Client) Feed(leagues []int, language string) (*FeedResponse, error) {
 	var resp FeedResponse
-	req := FeedRequest{Leagues: leagues}
+	req := FeedRequest{Leagues: leagues, Language: language}
 
 	reqBody, err := json.Marshal(req)
 	if err != nil {

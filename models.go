@@ -13,7 +13,6 @@ type FixtureByDateRequest struct {
 type ArticleResponse struct {
 	Title    string               `json:"title"`
 	Body     string               `json:"body"`
-	Summary  string		      `json:"summary"`
 	HashTags []string             `json:"hash_tags"`
 	Type     string               `json:"type"`
 	Data     FixtureDataStructure `json:"data"`
@@ -52,7 +51,8 @@ type FixtureDataStructure struct {
 }
 
 type FeedRequest struct {
-	Leagues []int `json:"leagues"`
+	Language string `json:"language"`
+	Leagues  []int  `json:"leagues"`
 }
 
 type FeedData struct {
@@ -87,6 +87,5 @@ type FeedData struct {
 }
 
 type FeedResponse struct {
-	Data []FeedData {
-	} `json:"data"`
+	Data []FeedData `json:"data"`
 }
